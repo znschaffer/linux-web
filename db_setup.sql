@@ -25,6 +25,9 @@ INSERT INTO users (first_name, last_name, email) VALUES
 ('Dennis', 'Ritchie', 'dennis@example.com'),
 ('Linus', 'Torvalds', 'linus@example.com');
 
+--Drop user if exists    
+DROP USER IF EXISTS 'labuser'@'localhost';
+
 -- Create a lab user
 CREATE USER 'labuser'@'localhost' IDENTIFIED BY 'labpass';
 GRANT ALL PRIVILEGES ON testdb.* TO 'labuser'@'localhost';
